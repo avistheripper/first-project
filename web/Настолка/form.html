@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<form id="demo">
+	Name <input type="text" name="name">
+	<br>
+	Email <input type="email" name="email" placeholder="Email@example.com">
+	<br>
+	Password <input type="Password" name="password">
+	<br>
+	Confirm the terms <input type="checkbox" name="checkbox">
+	<input type="submit">
+</form>
+	
+	<script>
+	var form = document.getElementById('demo');
+	form.onsubmit = function() {
+		if(form.name.value=="") {
+			alert('Enter your name');
+			return false;
+		} else if(form.email.value=="") {
+			alert('Enter the email');
+			return false;
+		} else if(form.password.value=="") {
+			alert('Enter the password');
+			return false;
+		} else if(!form.checkbox.checked) {
+			alert('Accept the terms!');
+			return false
+		} return true;
+	};
+
+
+
+
+	</script>
+</body>
+</html>
